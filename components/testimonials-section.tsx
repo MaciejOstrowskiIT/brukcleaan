@@ -68,7 +68,7 @@ export function TestimonialsSection() {
           </h2>
           <div className="mt-3 flex items-center justify-center gap-2 text-muted-foreground">
             <StarRating rating={5} />
-            <span className="text-sm font-semibold text-foreground">4.9/5</span>
+            <span className="text-sm font-semibold text-foreground">4.95/5</span>
             <span className="text-sm">na podstawie 47 opinii</span>
           </div>
         </div>

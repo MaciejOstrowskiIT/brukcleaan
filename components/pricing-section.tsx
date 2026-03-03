@@ -5,28 +5,28 @@ import { Button } from "@/components/ui/button"
 const PRICES = [
   {
     service: "Mycie kostki brukowej",
-    price: "od 12 zł/m²",
+    price: "od 10 zł/m²",
     includes: ["Mycie ciśnieniowe", "Usuwanie brudu i nalotów", "Ochrona roślin"],
     popular: true,
   },
   {
-    service: "Impregnacja kostki",
-    price: "od 8 zł/m²",
+    service: "Impregnacja",
+    price: "od 15 zł/m²",
     includes: ["Nałożenie impregnatu", "Ochrona przed mchem", "Efekt na lata"],
     popular: false,
   },
   {
     service: "Mycie elewacji",
     price: "od 15 zł/m²",
-    includes: ["Bezpieczne środki", "Regulacja ciśnienia", "Ochrona okien"],
+    includes: ["Bezpieczne mycie niskim ciśnieniem", "Mycie ciepłą wodą", "Zabezpieczenie miejsca pracy"],
     popular: false,
   },
-  {
-    service: "Usuwanie mchu",
-    price: "od 10 zł/m²",
-    includes: ["Aplikacja biocydu", "Mechaniczne usuwanie", "Profilaktyka"],
-    popular: false,
-  },
+  // {
+  //   service: "Usuwanie mchu",
+  //   price: "od 10 zł/m²",
+  //   includes: ["Aplikacja biocydu", "Mechaniczne usuwanie", "Profilaktyka"],
+  //   popular: false,
+  // },
 ]
 
 export function PricingSection() {
@@ -46,7 +46,7 @@ export function PricingSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PRICES.map((p) => (
             <Card
               key={p.service}
