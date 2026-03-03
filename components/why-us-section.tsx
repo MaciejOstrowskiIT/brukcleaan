@@ -40,7 +40,7 @@ export function WhyUsSection() {
     <section className="bg-graphite py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-500">
             Zaufaj profesjonalistom
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
@@ -57,8 +57,8 @@ export function WhyUsSection() {
               key={r.title}
               className="flex items-start gap-4 rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-6"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime/15">
-                <r.icon className="h-5 w-5 text-lime" />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-600/15">
+                <r.icon className="h-5 w-5 text-blue-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-primary-foreground">{r.title}</h3>

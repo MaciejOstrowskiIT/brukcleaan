@@ -47,7 +47,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={i}
           className={`h-4 w-4 ${
-            i < rating ? "fill-lime text-lime" : "fill-muted text-muted"
+            i < rating ? "fill-lime text-blue-600" : "fill-muted text-muted"
           }`}
         />
       ))}
@@ -60,7 +60,7 @@ export function TestimonialsSection() {
     <section id="opinie" className="bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Opinie klientów
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -82,7 +82,7 @@ export function TestimonialsSection() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div className="mt-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-lime/10 text-sm font-bold text-lime">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/10 text-sm font-bold text-blue-600">
                     {t.name.charAt(0)}
                   </div>
                   <div>

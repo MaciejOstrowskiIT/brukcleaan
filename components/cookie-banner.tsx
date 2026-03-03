@@ -37,7 +37,7 @@ export function CookieBanner() {
           <Button
             size="sm"
             onClick={accept}
-            className="bg-lime text-lime-foreground hover:bg-lime/90 text-xs font-semibold"
+            className="bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 text-xs font-semibold"
           >
             Akceptuję
           </Button>

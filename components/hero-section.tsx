@@ -30,7 +30,7 @@ export function HeroSection() {
 
           <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground drop-shadow-lg sm:text-5xl lg:text-6xl">
             Mycie ciśnieniowe{" "}
-            <span className="text-lime">Konin</span> i okolice
+            <span className="text-blue-600">Konin</span> i okolice
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/80 drop-shadow-sm">
@@ -43,7 +43,7 @@ export function HeroSection() {
             <a href={PHONE_HREF}>
               <Button
                 size="lg"
-                className="bg-lime text-lime-foreground hover:bg-lime/90 text-base font-bold shadow-lg shadow-lime/20"
+                className="bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 text-base font-bold shadow-lg shadow-lime/20"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Zadzwoń teraz
@@ -68,8 +68,8 @@ export function HeroSection() {
               key={b.label}
               className="flex items-start gap-4 rounded-xl border border-primary-foreground/10 bg-graphite/60 p-5 backdrop-blur-md"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime/15">
-                <b.icon className="h-5 w-5 text-lime" />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-600/15">
+                <b.icon className="h-5 w-5 text-blue-600" />
               </div>
               <div>
                 <p className="font-semibold text-primary-foreground">{b.label}</p>

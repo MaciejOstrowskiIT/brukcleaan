@@ -88,7 +88,7 @@ export function QuoteFormSection() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left – CTA */}
           <div className="flex flex-col justify-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+            <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
               Skontaktuj się
             </span>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
@@ -104,7 +104,7 @@ export function QuoteFormSection() {
               <a href={PHONE_HREF}>
                 <Button
                   size="lg"
-                  className="w-full bg-lime text-lime-foreground hover:bg-lime/90 text-lg font-bold shadow-lg shadow-lime/20 sm:w-auto"
+                  className="w-full bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 text-lg font-bold shadow-lg shadow-lime/20 sm:w-auto"
                 >
                   <Phone className="mr-2 h-5 w-5"/>
                   Zadzwoń: {PHONE}
@@ -120,7 +120,7 @@ export function QuoteFormSection() {
           <div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <CheckCircle className="mb-4 h-16 w-16 text-lime" />
+                <CheckCircle className="mb-4 h-16 w-16 text-blue-600" />
                 <h3 className="text-xl font-bold text-primary-foreground">
                   Dziękujemy!
                 </h3>
@@ -284,7 +284,7 @@ export function QuoteFormSection() {
                     <button
                       type="button"
                       onClick={() => fileInputRef.current?.click()}
-                      className="flex items-center justify-center gap-2 rounded-lg border border-dashed border-primary-foreground/20 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground/50 transition-colors hover:border-lime/40 hover:text-lime"
+                      className="flex items-center justify-center gap-2 rounded-lg border border-dashed border-primary-foreground/20 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground/50 transition-colors hover:border-blue-600/40 hover:text-blue-600"
                     >
                       <ImagePlus className="h-4 w-4" />
                       Dodaj zdjecia
@@ -311,7 +311,7 @@ export function QuoteFormSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-lime text-lime-foreground hover:bg-lime/90 font-bold"
+                  className="w-full bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 font-bold"
                 >
                   <Send className="mr-2 h-4 w-4" />
                   Wyślij zapytanie

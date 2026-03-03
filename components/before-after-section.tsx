@@ -107,7 +107,7 @@ function BeforeAfterSlider({ item }: { item: (typeof GALLERY_ITEMS)[number] }) {
         <span className="absolute top-3 left-3 z-20 rounded-md bg-graphite/80 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
           Przed
         </span>
-        <span className="absolute top-3 right-3 z-20 rounded-md bg-lime/90 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-lime-foreground">
+        <span className="absolute top-3 right-3 z-20 rounded-md bg-blue-600/90 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-600-foreground">
           Po
         </span>
 
@@ -142,7 +142,7 @@ export function BeforeAfterSection() {
     <section id="realizacje" className="bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Nasze realizacje
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

@@ -38,7 +38,7 @@ export function ProcessSection() {
     <section id="jak-pracujemy" className="bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Proces
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -56,10 +56,10 @@ export function ProcessSection() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {STEPS.map((step) => (
               <div key={step.num} className="relative text-center">
-                <div className="relative z-10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-lime bg-card shadow-sm">
-                  <step.icon className="h-7 w-7 text-lime" />
+                <div className="relative z-10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-blue-600 bg-card shadow-sm">
+                  <step.icon className="h-7 w-7 text-blue-600" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-lime">
+                <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
                   Krok {step.num}
                 </span>
                 <h3 className="mt-1 text-base font-semibold text-foreground">{step.title}</h3>

@@ -21,7 +21,7 @@ export function LocalAreaSection() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+            <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
               Zasięg działania
             </span>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -39,7 +39,7 @@ export function LocalAreaSection() {
                   key={area}
                   className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-sm font-medium text-foreground"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-lime" />
+                  <MapPin className="h-3.5 w-3.5 text-blue-600" />
                   {area}
                 </span>
               ))}

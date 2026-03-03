@@ -76,7 +76,7 @@ export function StickyHeader() {
           </ul>
 
           <a href="#wycena" className="hidden lg:block">
-            <Button className="bg-lime text-lime-foreground hover:bg-lime/90 font-semibold">
+            <Button className="bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 font-semibold">
               Darmowa wycena
               <ChevronDown className="ml-1 h-4 w-4" />
             </Button>

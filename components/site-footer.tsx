@@ -12,10 +12,10 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-graphite">
-                <span className="text-sm font-bold text-lime">BC</span>
+                <span className="text-sm font-bold text-blue-600">BC</span>
               </div>
               <span className="text-xl font-bold tracking-tight text-foreground">
-                Bruk<span className="text-lime">Clean</span>
+                Bruk<span className="text-blue-600">Clean</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -72,19 +72,19 @@ export function SiteFooter() {
             <h4 className="font-semibold text-foreground">Kontakt</h4>
             <ul className="mt-4 flex flex-col gap-3 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="h-4 w-4 text-lime" />
+                <Phone className="h-4 w-4 text-blue-600" />
                 {PHONE}
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="h-4 w-4 text-lime" />
+                <Mail className="h-4 w-4 text-blue-600" />
                 {EMAIL}
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
-                <MapPin className="h-4 w-4 text-lime" />
+                <MapPin className="h-4 w-4 text-blue-600" />
                 Konin, Wielkopolska
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Clock className="h-4 w-4 text-lime" />
+                <Clock className="h-4 w-4 text-blue-600" />
                 Pon&ndash;Sob 8:00&ndash;18:00
               </li>
             </ul>

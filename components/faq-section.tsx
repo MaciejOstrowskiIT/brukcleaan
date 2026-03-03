@@ -35,7 +35,7 @@ const FAQ_ITEMS = [
     a: "Nie zawsze. Obecność właściciela jest wskazana podczas oględzin i wyceny. Do realizacji usługi potrzebujemy jedynie dostępu do powierzchni oraz źródła wody. Po zakończeniu prac kontaktujemy się telefonicznie.",  },
   {
     q: "Jakich myjek używacie?",
-    a: "Korzystamy z wydajnych myjek spalinowych oraz myjki gorącowodnej, co pozwala nam skutecznie usuwać nawet trudne zabrudzenia. Pracujemy również z dodatkowymi urządzeniami, takimi jak talerze do mycia kostki czy odkurzacz do zbierania zanieczyszczeń po myciu, dzięki czemu usługa jest dokładniejsza i bardziej efektywna.",   a: 'Używamy mocnych spalinowych myjek oraz myjki gorącowodnej. Na wyposażeniu posiadamy wiele urządzeń poprawiających efektywność i efektowność, m.in. talerze do mycia kostki, odkurzacz do zbierania nieczystości po myciu.',
+    a: "Korzystamy z wydajnych myjek spalinowych oraz myjki gorącowodnej, co pozwala nam skutecznie usuwać nawet trudne zabrudzenia. Pracujemy również z dodatkowymi urządzeniami, takimi jak talerze do mycia kostki czy odkurzacz do zbierania zanieczyszczeń po myciu, dzięki czemu usługa jest dokładniejsza i bardziej efektywna.",
   },
   {
     q: "Czy po myciu powierzchnia jest śliska?",
@@ -48,7 +48,7 @@ export function FAQSection() {
     <section id="faq" className="bg-secondary py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             FAQ
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -59,7 +59,7 @@ export function FAQSection() {
         <Accordion type="single" collapsible className="mt-10">
           {FAQ_ITEMS.map((item, i) => (
             <AccordionItem key={i} value={`faq-${i}`} className="border-border">
-              <AccordionTrigger className="text-left text-base font-medium text-foreground hover:text-lime hover:no-underline">
+              <AccordionTrigger className="text-left text-base font-medium text-foreground hover:text-blue-600 hover:no-underline">
                 {item.q}
               </AccordionTrigger>
               <AccordionContent className="text-sm leading-relaxed text-muted-foreground">

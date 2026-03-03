@@ -36,7 +36,7 @@ export function ServicesSection() {
     <section id="uslugi" className="bg-secondary py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-lime">
+          <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Oferta
           </span>
           <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -54,8 +54,8 @@ export function ServicesSection() {
               className="group border-border bg-card transition-shadow hover:shadow-lg hover:shadow-lime/5"
             >
               <CardContent className="p-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-lime/10 transition-colors group-hover:bg-lime/20">
-                  <s.icon className="h-6 w-6 text-lime" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/10 transition-colors group-hover:bg-blue-600/20">
+                  <s.icon className="h-6 w-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-card-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
