@@ -1,11 +1,12 @@
 "use client"
 
-import {useState} from "react"
-import {Phone, Send, CheckCircle} from "lucide-react"
-import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import {Textarea} from "@/components/ui/textarea"
-import {Label} from "@/components/ui/label"
+import { useState, useRef, useCallback } from "react"
+import Image from "next/image"
+import { Phone, Send, CheckCircle, ImagePlus, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
@@ -27,9 +28,38 @@ const SERVICE_OPTIONS = [
   "Inne",
 ]
 
+const MAX_PHOTOS = 5
+const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10 MB
+
 export function QuoteFormSection() {
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [photos, setPhotos] = useState<{ file: File; preview: string }[]>([])
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const addPhotos = useCallback(
+    (files: FileList | null) => {
+      if (!files) return
+      const newPhotos: { file: File; preview: string }[] = []
+      for (const file of Array.from(files)) {
+        if (!file.type.startsWith("image/")) continue
+        if (file.size > MAX_FILE_SIZE) continue
+        if (photos.length + newPhotos.length >= MAX_PHOTOS) break
+        newPhotos.push({ file, preview: URL.createObjectURL(file) })
+      }
+      setPhotos((prev) => [...prev, ...newPhotos])
+    },
+    [photos.length]
+  )
+
+  const removePhoto = useCallback((index: number) => {
+    setPhotos((prev) => {
+      const updated = [...prev]
+      URL.revokeObjectURL(updated[index].preview)
+      updated.splice(index, 1)
+      return updated
+    })
+  }, [])
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -86,11 +116,10 @@ export function QuoteFormSection() {
           </div>
 
           {/* Right – Form */}
-          <div
-            className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
+          <div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <CheckCircle className="mb-4 h-16 w-16 text-lime"/>
+                <CheckCircle className="mb-4 h-16 w-16 text-lime" />
                 <h3 className="text-xl font-bold text-primary-foreground">
                   Dziękujemy!
                 </h3>
@@ -170,9 +199,8 @@ export function QuoteFormSection() {
                     Rodzaj usługi
                   </Label>
                   <Select name="service">
-                    <SelectTrigger
-                      className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
-                      <SelectValue placeholder="Wybierz usługę"/>
+                    <SelectTrigger className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
+                      <SelectValue placeholder="Wybierz usługę" />
                     </SelectTrigger>
                     <SelectContent>
                       {SERVICE_OPTIONS.map((opt) => (
@@ -197,12 +225,73 @@ export function QuoteFormSection() {
                   />
                 </div>
 
+                {/* Photo upload */}
+                <div className="flex flex-col gap-2">
+                  <Label className="text-sm text-primary-foreground/80">
+                    Zdjęcia powierzchni (maks. {MAX_PHOTOS})
+                  </Label>
+
+                  {photos.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {photos.map((photo, i) => (
+                        <div
+                          key={photo.preview}
+                          className="group relative h-20 w-20 overflow-hidden rounded-lg border border-primary-foreground/20"
+                        >
+                          <Image
+                            src={photo.preview}
+                            alt={`Zdjecie ${i + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="80px"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removePhoto(i)}
+                            className="absolute top-0.5 right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-graphite/80 text-primary-foreground opacity-0 transition-opacity group-hover:opacity-100"
+                            aria-label={`Usun zdjecie ${i + 1}`}
+                          >
+                            <X className="h-3 w-3" />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {photos.length < MAX_PHOTOS && (
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="flex items-center justify-center gap-2 rounded-lg border border-dashed border-primary-foreground/20 bg-primary-foreground/5 px-4 py-3 text-sm text-primary-foreground/50 transition-colors hover:border-lime/40 hover:text-lime"
+                    >
+                      <ImagePlus className="h-4 w-4" />
+                      Dodaj zdjecia
+                    </button>
+                  )}
+
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    className="sr-only"
+                    onChange={(e) => {
+                      addPhotos(e.target.files)
+                      e.target.value = ""
+                    }}
+                  />
+
+                  <p className="text-xs text-primary-foreground/30">
+                    JPG, PNG do 10 MB. Zdjęcia pomagają w dokładnej wycenie.
+                  </p>
+                </div>
+
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-lime text-lime-foreground hover:bg-lime/90 font-bold"
                 >
-                  <Send className="mr-2 h-4 w-4"/>
+                  <Send className="mr-2 h-4 w-4" />
                   Wyślij zapytanie
                 </Button>
 
