@@ -18,7 +18,7 @@ export function HeroSection() {
         src="/images/hero-bg.jpg"
         alt=""
         fill
-        priority
+        preload
         className="object-cover object-center opacity-30"
         sizes="100vw"
       />

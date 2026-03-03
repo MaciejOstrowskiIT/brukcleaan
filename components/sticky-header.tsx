@@ -54,10 +54,11 @@ export function StickyHeader() {
             <Image
               src="/images/logo.jpg"
               alt="BrukClean"
-              fill
+              width={128}
+              height={128}
               className="object-contain"
-              sizes="128px"
-              priority
+              loading="eager"
+              fetchPriority="high"
             />
           </a>
 
