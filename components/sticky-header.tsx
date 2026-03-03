@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Phone, Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Usługi", href: "#uslugi" },
@@ -50,13 +51,15 @@ export function StickyHeader() {
 
       {/* Main navigation */}
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-        <a href="#" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-graphite">
-            <span className="text-sm font-bold text-lime">BC</span>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-foreground">
-            Bruk<span className="text-lime">Clean</span>
-          </span>
+        <a href="#" className="relative block h-9 w-32">
+          <Image
+            src="/images/logo.jpg"
+            alt="BrukClean"
+            fill
+            className="object-contain"
+            sizes="128px"
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
