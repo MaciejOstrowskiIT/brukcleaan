@@ -11,7 +11,7 @@ const STEPS = [
     icon: Eye,
     num: "02",
     title: "Przygotowanie",
-    desc: "Zabezpieczamy rośliny, elewację i elementy wrażliwe. Nanosząc środek czyszczący.",
+    desc: "Zabezpieczamy rośliny, elewację i elementy wrażliwe.",
   },
   {
     icon: Droplets,
@@ -19,17 +19,18 @@ const STEPS = [
     title: "Mycie ciśnieniowe",
     desc: "Profesjonalnymi urządzeniami usuwamy brud, mech i naloty. Regulujemy ciśnienie do rodzaju powierzchni.",
   },
-  {
-    icon: Sparkles,
-    num: "04",
-    title: "Dopracowanie detali",
-    desc: "Ręczne doczyszczanie krawędzi, fugowania i trudno dostępnych miejsc.",
-  },
+
   {
     icon: ShieldCheck,
-    num: "05",
+    num: "04",
     title: "Impregnacja (opcjonalnie)",
     desc: "Nakładamy środek ochronny, który wydłuża efekt czystości i chroni przed mchem.",
+  },
+  {
+    icon: Sparkles,
+    num: "05",
+    title: "Dopracowanie detali",
+    desc: "W przypadku mycia kostki, ręczne uzupełnianie spoiny.",
   },
 ]
 
