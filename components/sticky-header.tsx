@@ -43,14 +43,7 @@ export function StickyHeader() {
                 Zadzwoń
               </Button>
             </a>
-            <a href="#wycena">
-              <Button
-                size="sm"
-                className="h-7 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 text-xs"
-              >
-                Darmowa wycena
-              </Button>
-            </a>
+
           </div>
         </div>
       </div>

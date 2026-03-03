@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     /* TODO: Podmień na właściwy URL */
-    url: 'https://brukclean.pl',
+    url: 'https://brukclean.com',
   },
   robots: 'index, follow',
 }
@@ -57,7 +57,7 @@ export default function RootLayout({
               description:
                 'Profesjonalne mycie kostki brukowej, czyszczenie podjazdów, tarasów i elewacji w Koninie i okolicach.',
               telephone: '+48 726 628 743',
-              email: 'kontakt@brukclean.pl',
+              email: 'biuro@brukclean.com',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Konin',
@@ -71,7 +71,7 @@ export default function RootLayout({
               },
               openingHours: 'Mo-Sa 08:00-18:00',
               /* TODO: Podmień na właściwy URL */
-              url: 'https://brukclean.pl',
+              url: 'https://brukclean.com',
               priceRange: '$$',
             }),
           }}

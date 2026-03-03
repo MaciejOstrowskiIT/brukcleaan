@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { Phone, Send, CheckCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import {useState} from "react"
+import {Phone, Send, CheckCircle} from "lucide-react"
+import {Button} from "@/components/ui/button"
+import {Input} from "@/components/ui/input"
+import {Textarea} from "@/components/ui/textarea"
+import {Label} from "@/components/ui/label"
 import {
   Select,
   SelectContent,
@@ -61,11 +61,12 @@ export function QuoteFormSection() {
               Skontaktuj się
             </span>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Darmowa wycena w 60 sekund
+              Darmowa wycena
             </h2>
             <p className="mt-4 leading-relaxed text-primary-foreground/60">
               Wypełnij formularz lub zadzwoń &mdash; odpowiadamy najczęściej
-              w ciągu kilku godzin. Wycena jest bezpłatna i niezobowiązująca.
+              w ciągu kilku godzin. Wycena jest bezpłatna i niezobowiązująca.<br/>
+              Wycena na miejscu możliwa po wcześniejszym uzgodnieniu.
             </p>
 
             <div className="mt-8 flex flex-col gap-4">
@@ -74,21 +75,22 @@ export function QuoteFormSection() {
                   size="lg"
                   className="w-full bg-lime text-lime-foreground hover:bg-lime/90 text-lg font-bold shadow-lg shadow-lime/20 sm:w-auto"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-2 h-5 w-5"/>
                   Zadzwoń: {PHONE}
                 </Button>
               </a>
               <p className="text-sm text-primary-foreground/40">
-                kontakt@brukclean.pl &middot; Pon&ndash;Sob 8:00&ndash;18:00
+                biuro@brukclean.com &middot; Pon&ndash;Sob 8:00&ndash;18:00
               </p>
             </div>
           </div>
 
           {/* Right – Form */}
-          <div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
+          <div
+            className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <CheckCircle className="mb-4 h-16 w-16 text-lime" />
+                <CheckCircle className="mb-4 h-16 w-16 text-lime"/>
                 <h3 className="text-xl font-bold text-primary-foreground">
                   Dziękujemy!
                 </h3>
@@ -168,8 +170,9 @@ export function QuoteFormSection() {
                     Rodzaj usługi
                   </Label>
                   <Select name="service">
-                    <SelectTrigger className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
-                      <SelectValue placeholder="Wybierz usługę" />
+                    <SelectTrigger
+                      className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
+                      <SelectValue placeholder="Wybierz usługę"/>
                     </SelectTrigger>
                     <SelectContent>
                       {SERVICE_OPTIONS.map((opt) => (
@@ -199,7 +202,7 @@ export function QuoteFormSection() {
                   size="lg"
                   className="w-full bg-lime text-lime-foreground hover:bg-lime/90 font-bold"
                 >
-                  <Send className="mr-2 h-4 w-4" />
+                  <Send className="mr-2 h-4 w-4"/>
                   Wyślij zapytanie
                 </Button>
 

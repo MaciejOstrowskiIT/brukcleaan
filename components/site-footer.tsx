@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 
 const PHONE = "+48 726 628 743"
-const EMAIL = "kontakt@brukclean.pl"
+const EMAIL = "biuro@brukclean.com"
 
 export function SiteFooter() {
   return (

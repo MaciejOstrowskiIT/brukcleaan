@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 const BENEFITS = [
   { icon: Clock, label: "Szybki termin", desc: "Realizacja nawet w 48h" },
   { icon: MapPin, label: "Konin + okolice", desc: "Dojazd do 30 km gratis" },
-  { icon: ShieldCheck, label: "Bezpieczna chemia", desc: "Ochrona roślin i fugi" },
+  // { icon: ShieldCheck, label: "Bezpieczna chemia", desc: "Ochrona roślin i fugi" },
 ]
 
 const PHONE_HREF = "tel:+48726628743"
@@ -27,13 +27,9 @@ export function HeroSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:py-28 lg:py-36">
         <div className="max-w-3xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-lime/15 px-4 py-1.5 text-sm font-medium text-lime backdrop-blur-sm">
-            <span className="h-2 w-2 rounded-full bg-lime" />
-            Profesjonalne mycie ciśnieniowe
-          </div>
 
           <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground drop-shadow-lg sm:text-5xl lg:text-6xl">
-            Mycie kostki brukowej{" "}
+            Mycie ciśnieniowe{" "}
             <span className="text-lime">Konin</span> i okolice
           </h1>
 
@@ -58,7 +54,7 @@ export function HeroSection() {
                 size="lg"
                 className="border border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 text-base font-semibold"
               >
-                Wycena w 60 sekund
+                Wycena
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
             </a>
@@ -66,7 +62,7 @@ export function HeroSection() {
         </div>
 
         {/* Benefits mini-cards */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-3 lg:mt-16">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16">
           {BENEFITS.map((b) => (
             <div
               key={b.label}
