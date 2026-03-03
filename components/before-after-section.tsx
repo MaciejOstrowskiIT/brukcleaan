@@ -39,8 +39,9 @@ function BeforeAfterSlider({ item }: { item: (typeof GALLERY_ITEMS)[number] }) {
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent) => {
+      e.preventDefault()
       isDragging.current = true
-      ;(e.target as HTMLElement).setPointerCapture(e.pointerId)
+      containerRef.current?.setPointerCapture(e.pointerId)
       updatePosition(e.clientX)
     },
     [updatePosition]
@@ -49,20 +50,22 @@ function BeforeAfterSlider({ item }: { item: (typeof GALLERY_ITEMS)[number] }) {
   const handlePointerMove = useCallback(
     (e: React.PointerEvent) => {
       if (!isDragging.current) return
+      e.preventDefault()
       updatePosition(e.clientX)
     },
     [updatePosition]
   )
 
-  const handlePointerUp = useCallback(() => {
+  const handlePointerUp = useCallback((e: React.PointerEvent) => {
     isDragging.current = false
+    containerRef.current?.releasePointerCapture(e.pointerId)
   }, [])
 
   return (
     <div className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm">
       <div
         ref={containerRef}
-        className="relative aspect-[4/3] cursor-col-resize select-none overflow-hidden bg-muted"
+        className="relative aspect-[4/3] cursor-col-resize select-none overflow-hidden bg-muted touch-none"
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
