@@ -6,19 +6,19 @@ const PRICES = [
   {
     service: "Mycie kostki brukowej",
     price: "od 10 zł/m²",
-    includes: ["Mycie ciśnieniowe", "Usuwanie brudu i nalotów", "Ochrona roślin"],
+    includes: ["Mycie ciśnieniowe", "Usuwanie brudu i nalotów", "Usuwanie mchów"],
     popular: true,
   },
   {
     service: "Impregnacja",
     price: "od 15 zł/m²",
-    includes: ["Nałożenie impregnatu", "Ochrona przed mchem", "Efekt na lata"],
+    includes: ["Nałożenie impregnatu", "Ochrona przed zabrudzeniami", "Efekt na lata"],
     popular: false,
   },
   {
     service: "Mycie elewacji",
     price: "od 15 zł/m²",
-    includes: ["Bezpieczne mycie niskim ciśnieniem", "Mycie ciepłą wodą", "Zabezpieczenie miejsca pracy"],
+    includes: ["Bezpieczne mycie niskim ciśnieniem", "Mycie ciepłą wodą", "Zabezpieczenie elementów wrażliwych"],
     popular: false,
   },
   // {

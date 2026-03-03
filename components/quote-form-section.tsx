@@ -20,11 +20,12 @@ const PHONE_HREF = "tel:+48726628743"
 
 const SERVICE_OPTIONS = [
   "Mycie kostki brukowej",
-  "Impregnacja kostki",
   "Mycie elewacji",
-  "Czyszczenie dachu",
-  "Usuwanie mchu",
-  "Czyszczenie ogrodzenia",
+  "Mycie tarasów",
+  "Mycie bram i ogrodzeń",
+  "Mycie hal i obiektów",
+  "Czyszczenie maszyn budowlanych",
+  "Czyszczenie maszyn rolniczych",
   "Inne",
 ]
 
@@ -195,21 +196,42 @@ export function QuoteFormSection() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="service" className="text-sm text-primary-foreground/80">
-                    Rodzaj usługi
-                  </Label>
-                  <Select name="service">
-                    <SelectTrigger className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
-                      <SelectValue placeholder="Wybierz usługę" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {SERVICE_OPTIONS.map((opt) => (
-                        <SelectItem key={opt} value={opt}>
-                          {opt}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="flex flex-col gap-1.5">
+
+                      <Label htmlFor="service" className="text-sm text-primary-foreground/80">
+                        Rodzaj usługi
+                      </Label>
+                      <Select name="service">
+                        <SelectTrigger className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground">
+                          <SelectValue placeholder="Wybierz usługę" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {SERVICE_OPTIONS.map((opt) => (
+                            <SelectItem key={opt} value={opt}>
+                              {opt}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+
+                      <Label htmlFor="service" className="text-sm text-primary-foreground/80">
+                        Adres email *
+                      </Label>
+                      <Input
+                        required
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="np. biuro@brukclean.com"
+                        className="border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30"
+                      />
+                    </div>
+
+                  </div>
+
                 </div>
 
                 <div className="flex flex-col gap-1.5">
@@ -228,7 +250,7 @@ export function QuoteFormSection() {
                 {/* Photo upload */}
                 <div className="flex flex-col gap-2">
                   <Label className="text-sm text-primary-foreground/80">
-                    Zdjęcia powierzchni (maks. {MAX_PHOTOS})
+                    Zdjęcia powierzchni * (maks. {MAX_PHOTOS})
                   </Label>
 
                   {photos.length > 0 && (
@@ -281,7 +303,7 @@ export function QuoteFormSection() {
                     }}
                   />
 
-                  <p className="text-xs text-primary-foreground/30">
+                  <p className="text-sm text-primary-foreground/70">
                     JPG, PNG do 10 MB. Zdjęcia pomagają w dokładnej wycenie.
                   </p>
                 </div>

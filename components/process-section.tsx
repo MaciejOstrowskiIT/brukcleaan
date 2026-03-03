@@ -5,21 +5,20 @@ const STEPS = [
     icon: ClipboardList,
     num: "01",
     title: "Wycena i oględziny",
-    desc: "Bezpłatna wizyta lub wycena na podstawie zdjęć. Określamy zakres prac i cenę.",
+    desc: "Oferujemy bezpłatną wycenę na miejscu lub na podstawie zdjęć. Ustalamy zakres prac i podajemy cenę.",
   },
   {
     icon: Eye,
     num: "02",
-    title: "Przygotowanie",
-    desc: "Zabezpieczamy rośliny, elewację i elementy wrażliwe.",
+    title: "Przygotowanie powierzchni",
+    desc: "Przed rozpoczęciem prac zabezpieczamy rośliny oraz inne wrażliwe elementy otoczenia.",
   },
   {
     icon: Droplets,
     num: "03",
     title: "Mycie ciśnieniowe",
-    desc: "Profesjonalnymi urządzeniami usuwamy brud, mech i naloty. Regulujemy ciśnienie do rodzaju powierzchni.",
+    desc: "Dokładnie usuwamy brud, mech i osady, dobierając odpowiednie ciśnienie do rodzaju czyszczonej powierzchni.",
   },
-
   {
     icon: ShieldCheck,
     num: "04",
@@ -30,7 +29,7 @@ const STEPS = [
     icon: Sparkles,
     num: "05",
     title: "Dopracowanie detali",
-    desc: "W przypadku mycia kostki, ręczne uzupełnianie spoiny.",
+    desc: "Na koniec dbamy o estetyczne wykończenie, a w przypadku kostki brukowej uzupełniamy wypłukane spoiny.",
   },
 ]
 

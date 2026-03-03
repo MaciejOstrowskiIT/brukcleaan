@@ -25,16 +25,6 @@ const SERVICES = [
     desc: "Delikatne, ale skuteczne czyszczenie fasad budynków. Bezpieczne dla tynku i farby.",
   },
   {
-    icon: Home,
-    title: "Czyszczenie dachów",
-    desc: "Usuwanie porostów, mchu i zabrudzeń z dachówki i blachy. Opcjonalna impregnacja.",
-  },
-  {
-    icon: Leaf,
-    title: "Usuwanie mchu i porostów",
-    desc: "Skuteczna biocydowa metoda eliminacji mchu z kostki, murów i dachów.",
-  },
-  {
     icon: Fence,
     title: "Czyszczenie ogrodzeń",
     desc: "Mycie ogrodzeń betonowych, metalowych i drewnianych. Przywracamy świeży wygląd.",

@@ -11,20 +11,16 @@ const FAQ_ITEMS = [
     a: "Czas zależy od powierzchni i stopnia zabrudzenia. Standardowy podjazd (30–50 m²) zajmuje nam ok. 3–5 godzin. Przy większych zleceniach wracamy kolejnego dnia.",
   },
   {
-    q: "Czy mycie ciśnieniowe niszczy fugę?",
-    a: "Nie, jeśli wykonuje je profesjonalista. Stosujemy odpowiednie ciśnienie i dysze, które skutecznie czyszczą, ale nie uszkadzają fugi ani kostki.",
-  },
-  {
     q: "Czy można myć kostkę zimą?",
-    a: "Mycie ciśnieniowe wykonujemy od marca do listopada. Przy temperaturze poniżej 5°C woda może zamarzać, co utrudnia pracę i pogarsza efekt.",
+    a: "Nie. Mycie ciśnieniowe wykonujemy od marca do listopada. Przy temperaturze poniżej 5°C woda może zamarzać, co utrudnia pracę i pogarsza efekt.",
   },
   {
     q: "Czy warto impregnować kostkę po myciu?",
-    a: "Zdecydowanie tak. Impregnacja chroni kostkę przed ponownym wrastaniem mchu, plamami oleju i wnikaniem wilgoci. Efekt utrzymuje się 2–4 lata.",
+    a: "Tak, warto zaimpregnować kostkę brukową po umyciu. Zabieg ten tworzy hydrofobową powłokę, która chroni przed wnikaniem wilgoci (zmniejszając ryzyko pękania zimą), tłuszczami, olejami oraz plamami. Dodatkowo impregnacja ogranicza porastanie mchem i chwastami, zapobiega blaknięciu koloru, ułatwia czyszczenie oraz utrwala efekt czystej nawierzchni na lata.",
   },
   {
     q: "Jaki jest zasięg dojazdu?",
-    a: "Działamy w Koninie i okolicach do ok. 30 km — czyli m.in. Stare Miasto, Golina, Rychwał, Ślesin, Kazimierz Biskupi. Dojazd w tym zakresie jest bezpłatny.",
+    a: "Działamy w Koninie i okolicach do ok. 30 km — czyli m.in. Stare Miasto, Golina, Rychwał, Ślesin, Kazimierz Biskupi. Dojazd w tym zakresie jest bezpłatny. Powyżej 30 km dojazd jest odpłatny.",
   },
   {
     q: "Czy usuwacie plamy oleju z kostki?",
@@ -32,19 +28,18 @@ const FAQ_ITEMS = [
   },
   {
     q: "Ile kosztuje wycena?",
-    a: "Wycena jest zawsze bezpłatna i niezobowiązująca. Wystarczy zadzwonić lub wypełnić formularz — odpowiadamy najczęściej w ciągu kilku godzin.",
+    a: "Wycena jest zawsze bezpłatna i niezobowiązująca. Wystarczy zadzwonić lub wypełnić formularz wraz ze zdjęciami — odpowiadamy najczęściej w ciągu kilku godzin.",
   },
   {
     q: "Czy muszę być w domu podczas mycia?",
-    a: "Nie koniecznie. Wystarczy, że zapewnisz dostęp do powierzchni i źródła wody. Po zakończeniu pracy kontaktujemy się telefonicznie.",
-  },
+    a: "Nie zawsze. Obecność właściciela jest wskazana podczas oględzin i wyceny. Do realizacji usługi potrzebujemy jedynie dostępu do powierzchni oraz źródła wody. Po zakończeniu prac kontaktujemy się telefonicznie.",  },
   {
     q: "Jakich myjek używacie?",
-    a: "Pracujemy na profesjonalnych myjkach ciśnieniowych z regulacją ciśnienia (do 250 bar). Dobieramy dysze i parametry do rodzaju powierzchni.",
+    a: "Korzystamy z wydajnych myjek spalinowych oraz myjki gorącowodnej, co pozwala nam skutecznie usuwać nawet trudne zabrudzenia. Pracujemy również z dodatkowymi urządzeniami, takimi jak talerze do mycia kostki czy odkurzacz do zbierania zanieczyszczeń po myciu, dzięki czemu usługa jest dokładniejsza i bardziej efektywna.",   a: 'Używamy mocnych spalinowych myjek oraz myjki gorącowodnej. Na wyposażeniu posiadamy wiele urządzeń poprawiających efektywność i efektowność, m.in. talerze do mycia kostki, odkurzacz do zbierania nieczystości po myciu.',
   },
   {
     q: "Czy po myciu powierzchnia jest śliska?",
-    a: "Tak, bezpośrednio po myciu kostka może być śliska. Prosimy o ostrożność i nieużywanie powierzchni przez ok. 2–4 godziny. Pełne schnięcie trwa 24–48h.",
+    a: "Tak, bezpośrednio po myciu kostka może być śliska. Prosimy o ostrożność i nieużywanie powierzchni przez ok. 2–4 godziny. Pełne schnięcie trwa 24–48h, zależnie od warunków pogodowych.",
   },
 ]
 

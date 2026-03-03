@@ -38,18 +38,10 @@ export function StickyHeader() {
               <a href={PHONE_HREF}>
                 <Button
                   size="sm"
-                  className="h-7 bg-lime text-lime-foreground hover:bg-lime/90 text-xs font-semibold"
+                  className="h-7 bg-blue-500 text-shadow-white hover:bg-blue-600 text-xs font-semibold"
                 >
                   <Phone className="mr-1 h-3 w-3" />
                   Zadzwoń
-                </Button>
-              </a>
-              <a href="#wycena">
-                <Button
-                  size="sm"
-                  className="h-7 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 text-xs"
-                >
-                  Darmowa wycena
                 </Button>
               </a>
             </div>
