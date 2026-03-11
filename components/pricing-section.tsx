@@ -51,11 +51,11 @@ export function PricingSection() {
             <Card
               key={p.service}
               className={`relative border-border bg-card transition-shadow hover:shadow-lg ${
-                p.popular ? "ring-2 ring-lime" : ""
+                p.popular ? "ring-2 ring-blue-500" : ""
               }`}
             >
               {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-0.5 text-xs font-bold text-blue-600-foreground">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-0.5 text-md font-bold text-white">
                   Najpopularniejsze
                 </div>
               )}
@@ -75,7 +75,7 @@ export function PricingSection() {
                     variant={p.popular ? "default" : "outline"}
                     className={`w-full ${
                       p.popular
-                        ? "bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90"
+                        ? "bg-blue-600 text-white hover:bg-blue-400/90"
                         : "border-border text-foreground hover:bg-muted"
                     }`}
                   >

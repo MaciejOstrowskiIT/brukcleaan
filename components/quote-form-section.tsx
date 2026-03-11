@@ -88,7 +88,7 @@ export function QuoteFormSection() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left – CTA */}
           <div className="flex flex-col justify-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+            <span className="text-sm font-semibold uppercase tracking-wider text-blue-400">
               Skontaktuj się
             </span>
             <h2 className="mt-2 text-balance text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
@@ -104,7 +104,7 @@ export function QuoteFormSection() {
               <a href={PHONE_HREF}>
                 <Button
                   size="lg"
-                  className="w-full bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 text-lg font-bold shadow-lg shadow-lime/20 sm:w-auto"
+                  className="w-full bg-blue-600 text-white hover:bg-blue-600/90 text-lg font-bold shadow-lg shadow-lime/20 sm:w-auto"
                 >
                   <Phone className="mr-2 h-5 w-5"/>
                   Zadzwoń: {PHONE}
@@ -311,7 +311,7 @@ export function QuoteFormSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-blue-600 text-blue-600-foreground hover:bg-blue-600/90 font-bold"
+                  className="w-full bg-blue-600 text-white hover:bg-blue-600/90 font-bold"
                 >
                   <Send className="mr-2 h-4 w-4" />
                   Wyślij zapytanie

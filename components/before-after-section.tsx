@@ -104,10 +104,10 @@ function BeforeAfterSlider({ item }: { item: (typeof GALLERY_ITEMS)[number] }) {
         </div>
 
         {/* Labels */}
-        <span className="absolute top-3 left-3 z-20 rounded-md bg-graphite/80 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+        <span className="absolute top-3 left-3 z-20 rounded-md bg-graphite px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
           Przed
         </span>
-        <span className="absolute top-3 right-3 z-20 rounded-md bg-blue-600/90 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-600-foreground">
+        <span className="absolute top-3 right-3 z-20 rounded-md bg-blue-600/90 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-white">
           Po
         </span>
 
