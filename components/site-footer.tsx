@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import Image from "next/image";
 
 const PHONE = "+48 726 628 743"
 const EMAIL = "biuro@brukclean.com"
@@ -10,13 +11,14 @@ export function SiteFooter() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-graphite">
-                <span className="text-sm font-bold text-blue-600">BC</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                Bruk<span className="text-blue-600">Clean</span>
-              </span>
+            <div className="relative h-8 w-28">
+              <Image
+                src="/images/logo.jpg"
+                alt="BrukClean"
+                fill
+                className="object-contain object-left"
+                sizes="112px"
+              />
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Profesjonalne mycie kostki brukowej, elewacji i podjazdów w Koninie
@@ -29,10 +31,9 @@ export function SiteFooter() {
             <h4 className="font-semibold text-foreground">Nawigacja</h4>
             <ul className="mt-4 flex flex-col gap-2 text-sm">
               {[
-                { label: "Usługi", href: "#uslugi" },
                 { label: "Realizacje", href: "#realizacje" },
+                { label: "Usługi", href: "#uslugi" },
                 { label: "Cennik", href: "#cennik" },
-                { label: "Opinie", href: "#opinie" },
                 { label: "FAQ", href: "#faq" },
                 { label: "Kontakt", href: "#kontakt" },
               ].map((link) => (
@@ -96,13 +97,13 @@ export function SiteFooter() {
             &copy; {new Date().getFullYear()} BrukClean. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
-            {/* TODO: Podmień na właściwe linki */}
-            <a href="#" className="transition-colors hover:text-foreground">
-              Polityka prywatności
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
-              Regulamin
-            </a>
+            {/*/!* TODO: Podmień na właściwe linki *!/*/}
+            {/*<a href="#" className="transition-colors hover:text-foreground">*/}
+            {/*  Polityka prywatności*/}
+            {/*</a>*/}
+            {/*<a href="#" className="transition-colors hover:text-foreground">*/}
+            {/*  Regulamin*/}
+            {/*</a>*/}
           </div>
         </div>
       </div>
